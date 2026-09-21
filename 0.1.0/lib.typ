@@ -14,7 +14,7 @@
     art = sys.inputs.art
 }
 
-#let long_number(number) = {
+#let long-number(number) = {
   if number >= 10 {
     number
   } else {
@@ -68,7 +68,7 @@
                 [solutions]
             }* \ ]
         } else {
-            [*Sheet #long_number(number)#if (art == "S" or art == "T") {
+            [*Sheet #long-number(number)#if (art == "S" or art == "T") {
                 [, ]
                 if (art == "T") {
                     [Tutor ]
@@ -173,7 +173,7 @@
 
     #if "number" in sys.inputs.keys() {number = int(sys.inputs.number)}
 
-    #set document(title: [Exercise sheet #long_number(number)]);
+    #set document(title: [Exercise sheet #long-number(number)]);
 
     #set enum(numbering: "(a)", spacing: 1em, indent: 0em)
     #set list(spacing: 1em, indent: 1em)
